@@ -1,0 +1,196 @@
+# Używane komendy w tutorialu
+
+
+
+# GŁÓWNY
+
+
+# WPROWADZENIE
+
+# Zad 1.
+git commit
+git commit
+
+# Zad 2.
+git checkout -b bugFix
+
+# Zad 3.
+git checkout -b bugFix
+git commit
+git checkout main
+git commit
+git merge bugFix
+
+# Zad 4.
+git checkout -b bugFix
+git commit
+git checkout main
+git commit
+git checkout bugFix
+git rebase main
+
+
+# ROZKRĘCENIE
+
+# Zad 1.
+git checkout c4
+
+# Zad 2.
+git checkout c3
+
+# Zad 3.
+git branch -f main c6
+git branch -f bugFix bugFix~3
+git checkout c1
+
+# Zad 4.
+git reset HEAD^
+git checkout pushed
+git revert HEAD
+
+
+# PRZENOSZENIE PRACY
+
+# Zad 1.
+git cherry-pick c3 c4 c7
+
+# Zad 2.
+git rebase -i HEAD~4
+
+
+# PO TROCHU WSZYSTKIEGO
+
+# Zad 1.
+git rebase -i HEAD~3
+git branch -f main
+
+# Zad 2.
+git rebase -i HEAD~2
+git commit --amend
+git rebase -i HEAD~2
+git branch -f main
+
+# Zad 3.
+git checkout main
+git cherry-pick c2
+git commit --amend
+git cherry-pick c3
+
+# Zad 4.
+git tag v0 c1
+git tag v1 c2
+git checkout v1
+
+# Zad 5.
+git commit
+
+
+# TEMATY ZAAWANSOWANE
+
+# Zad 1.
+git rebase main bugFix
+git rebase bugFix side
+git rebase side another
+git branch -f main
+
+# Zad 2.
+git branch bugWork main^^2~
+
+# Zad 3.
+git checkout one
+git chery-pick c4 c3 c2
+git checkout two
+git cherry-pick c5 c4 c3 c2
+git branch -f three c2
+
+
+
+# ZDALNY
+
+
+# Push & Pull
+
+# Zad 1.
+git clone
+
+# Zad 2.
+git commit
+git checkout o/main
+git commit
+
+# Zad 3.
+git fetch
+
+# Zad 4.
+git pull
+
+# Zad 5.
+git clone
+git fakeTeamwork 2
+git commit
+git pull
+
+# Zad 6.
+git commit
+git commit
+git push
+
+# Zad 7. anie Wyczyść Cofnij Cel Pomoc 
+git vlone
+git fakeTeamwork
+git commit
+git pull --rebase
+git push
+
+# Zad 8.
+git reset --hard o/main
+git checkout -b feature c2
+git push origin feature
+
+
+# Do źródła i dalej
+
+# Zad 1.
+git fetch
+git rebase o/main side1
+git rebase side1 side2
+git rebase side2 side3
+git rebase side3 main
+git push
+
+# Zad 2.
+git checkout main
+git pull
+git merge siede1
+git merge side2
+git merge side3
+git push
+
+# Zad 3.
+git checkout -b side o/main
+git fetch
+git commit
+git pull -rebase
+git push
+
+# Zad 4.
+git push origin main
+git push origin foo
+
+# Zad 5.
+git push origin main^:foo
+git push origin foo:main
+
+# Zad 6.
+git fetch origin main~1:foo
+git fetch origin foo:main
+git checkout foo
+git merge main
+
+# Zad 7.
+git push origin  :foo
+git fetch origin  :bar
+
+# Zad 8.
+git pull origin bar:foo
+git pull origin main:side
